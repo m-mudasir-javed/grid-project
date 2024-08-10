@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr 10rem;
+    grid-template-columns: 7rem 1fr 20rem;
+    grid-template-areas: "nav header realtor"
+                          "nav main  main";
+    height: 100vh;
+    width: 100vw;
+}
+
+.navbar {
+    grid-area: nav;
+    background-color: goldenrod;
+}
+
+.navbar .icon {
+    width: 3rem;
+    height: 1px;
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    background-color: aliceblue;
+}
+
+.navbar .icon::before{
+    content: "";
+    position: absolute;
+    width: 3rem;
+    height: 0.1rem;
+    background-color: aliceblue;
+    top: -1rem;
+}
+
+.navbar .icon::after {
+    content: "";
+    position: absolute;
+    width: 3rem;
+    height: 0.1rem;
+    background-color: aliceblue;
+    top: 1rem;
+}
+
+.header {
+    grid-area: header;
+   background-color: rgb(68, 68, 68);
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 3rem 1fr 1rem 1fr;
+   padding: 3rem;
+
+}
+
+.header .logo {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    justify-self: center;
+    height: 2.5rem;
+    align-self: center;
+}
+
+.header .logo img {
+    height: 2.5rem;
+}
+
+.header .text {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 3;
+    justify-self: start;
+    align-self: center;
+    left: 3rem;
+    color: aliceblue;
+    margin-top: 7rem;
+    margin-left: 1rem;
+}
+
+.header .text h2 {
+    font-size: 2.5rem;
+}
+.header .text h1 {
+    padding-top: 0.7rem;
+    font-size: 3.4rem;
+}
+
+.header .text .pra {
+    margin-top: 0.7rem;
+    font-size: 1.5rem;
+    color: black;
+    background-color: aliceblue;
+    width: 17rem;
+
+}
+
+.realtor {
+    grid-area: realtor;
+    background-color: gray;
+}
+
+.main {
+    grid-area: main;
+    background-color: aliceblue;
+}
