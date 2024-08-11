@@ -54,8 +54,8 @@ html {
     grid-area: header;
    background-color: rgb(68, 68, 68);
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: 3rem 1fr 1rem 1fr;
+   grid-template-columns: 1fr;
+   grid-template-rows: 3rem 1fr 1rem 20rem;
    padding: 3rem;
 
 }
@@ -97,15 +97,90 @@ html {
     color: black;
     background-color: aliceblue;
     width: 17rem;
+    height: 2rem;
 
+}
+
+.header .seen-on {
+    color: aliceblue;
+    grid-row: 3 / span 1; 
+    grid-column: 1 / span 1;
+    height: 6rem;
+    justify-self: center;
+    
+}
+
+.header .tr {
+    width: 98rem;
+    text-align: center;
+    height: 1rem;
+    margin-top: 8rem;
+    position: relative;
+}
+
+.header .tr::after {
+    content: "";
+    width: 30rem;
+    height: 0.1rem;
+    background-color: aliceblue;
+    position: absolute;
+    top: 0.7rem;
+    left: 16rem;
+
+}
+
+.header .tr::before {
+    content: "";
+    width: 30rem;
+    height: 0.1rem;
+    background-color: aliceblue;
+    position: absolute;
+    top: 0.7rem;
+    right: 16rem;
+}
+
+.header .sub {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 3;
+    justify-self: center;
+    align-self: center;
+}
+
+
+.header .sol {
+    grid-row: 4 / span 1;
+    height: 10rem;
+    justify-self: center;
+    align-self: center;
+    padding-top: 4rem;
+    
+}
+
+.header .se {
+    height: 5rem;
+    padding-left: 1rem;
+    
 }
 
 .realtor {
     grid-area: realtor;
     background-color: gray;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 3rem 2rem;
 }
+
+
+  .realtors .realtor1 .prap {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    align-self: start;
+    font-size: 0.8rem;
+  }
 
 .main {
     grid-area: main;
     background-color: aliceblue;
 }
+
